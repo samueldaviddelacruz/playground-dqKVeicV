@@ -2,6 +2,7 @@ package main
 import "testing"
 import "fmt"
 import "./universe"
+import "./Exercises"
 
 func success(b bool) {
   fmt.Printf("TECHIO> success %v\n",b)
