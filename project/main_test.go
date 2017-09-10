@@ -14,7 +14,7 @@ func msg(channel string, msg string) {
 
 func TestHelloWorld(t *testing.T) {
 	expected := "Hello, World!"
-	if observed := HelloWorld(); observed != expected {
+	if observed := exercises.HelloWorld(); observed != expected {
     
 		t.Fatalf("Exercises.HelloWorld() = %v, want %v", observed, expected)
 		success(false)
