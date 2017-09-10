@@ -17,8 +17,11 @@ func TestHelloWorld(t *testing.T) {
 	if observed := HelloWorld(); observed != expected {
     
 		t.Fatalf("HelloWorld() = %v, want %v", observed, expected)
-    success(false)
-    msg("Oops! 🐞", "Please try again 🤔")
+		success(false)
+		msg("Oops! 🐞", "Please try again 🤔")
+	}else{
+		 msg("Kudos 🌟", "You've passed a test!")
+   		 success(true)
 	}
 }
 
