@@ -1,3 +1,3 @@
-package Helloworld
+package exercises
 import "fmt"
 
