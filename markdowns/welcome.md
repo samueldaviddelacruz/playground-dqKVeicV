@@ -13,5 +13,5 @@ Define a function named HelloWorld that takes no arguments,and returns a string.
 In other words, define a function with the following signature: HelloWorld() string
 
 
-@[The classical introductory exercise. Just say "Hello, World!"]({"stubs":["Exercises/Helloworld.go"], "command":"go test -run HelloWorld"})
+@[The classical introductory exercise. Just say "Hello, World!"]({"stubs":["exercises/Helloworld.go"], "command":"go test -run HelloWorld"})
 
