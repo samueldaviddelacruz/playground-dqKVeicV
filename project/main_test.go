@@ -12,6 +12,21 @@ func msg(channel string, msg string) {
   fmt.Printf("TECHIO> message --channel \"%v\" \"%v\"\n", channel, msg)
 }
 
+func TestShareWith(t *testing.T) {
+	tests := []struct {
+		name, expected string
+	}{
+		{"", "One for you, one for me."},
+		{"Alice", "One for Alice, one for me."},
+		{"Bob", "One for Bob, one for me."},
+	}
+	for _, test := range tests {
+		if observed := ShareWith(test.name); observed != test.expected {
+			t.Fatalf("ShareWith(%s) = %v, want %v", test.name, observed, test.expected)
+		}
+	}
+}
+
 func TestHelloWorld(t *testing.T) {
 	expected := "Hello, World!"
 	if observed := exercises.HelloWorld(); observed != expected {
