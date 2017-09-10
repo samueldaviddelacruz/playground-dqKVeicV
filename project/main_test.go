@@ -2,6 +2,7 @@ package main
 import "testing"
 import "fmt"
 import "./universe"
+import "./Exercises"
 
 func success(b bool) {
   fmt.Printf("TECHIO> success %v\n",b)
@@ -16,8 +17,14 @@ func TestHelloWorld(t *testing.T) {
 	if observed := HelloWorld(); observed != expected {
     
 		t.Fatalf("HelloWorld() = %v, want %v", observed, expected)
-    success(false)
-    msg("Oops! 🐞", "Please try again 🤔")
+   		success(false)
+    		msg("Oops! 🐞", "Please try again 🤔")
+			
+	}else {
+		
+	 msg("Congrats! 🌟", "You've passed a test!")
+    	 success(true)	
+		
 	}
 }
 
