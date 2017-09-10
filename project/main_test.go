@@ -21,7 +21,7 @@ func TestShareWith(t *testing.T) {
 		{"Bob", "One for Bob, one for me."},
 	}
 	for _, test := range tests {
-		if observed := ShareWith(test.name); observed != test.expected {
+		if observed := exercises.ShareWith(test.name); observed != test.expected {
 			t.Fatalf("ShareWith(%s) = %v, want %v", test.name, observed, test.expected)
 			success(false)
 			msg("Oops! 👎", "Please try again !")
