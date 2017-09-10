@@ -11,6 +11,16 @@ func msg(channel string, msg string) {
   fmt.Printf("TECHIO> message --channel \"%v\" \"%v\"\n", channel, msg)
 }
 
+func TestHelloWorld(t *testing.T) {
+	expected := "Hello, World!"
+	if observed := HelloWorld(); observed != expected {
+    
+		t.Fatalf("HelloWorld() = %v, want %v", observed, expected)
+    success(false)
+    msg("Oops! 🐞", "Please try again 🤔")
+	}
+}
+
 func TestUniverse(t *testing.T) {
   var s = universe.CountAllStars(800,120,450)
   if s != 1370 {
