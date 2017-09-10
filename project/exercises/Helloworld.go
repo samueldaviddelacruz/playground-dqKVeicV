@@ -1,5 +1,5 @@
 package exercises
 
-HelloWorld() string{
+func HelloWorld() string{
   return ""
 }
