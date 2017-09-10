@@ -26,7 +26,12 @@ func TestShareWith(t *testing.T) {
 			success(false)
 			msg("Oops! 👎", "Please try again !")
 		}else{
-			msg(test.name, test.expected + "👍")
+			if test.name == ""{
+			      msg("you", test.expected + "👍")	
+			}else{
+			  msg(test.name, test.expected + "👍")	
+			}
+			
 		}
 	}
 	success(true)
