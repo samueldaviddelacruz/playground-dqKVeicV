@@ -30,7 +30,9 @@ Define a function ShareWith(string) string.
 
 Example:
 h := ShareWith("")
+
 fmt.Println(h)
+
 // Output: One for you, one for me.	
 
 @[Two-fer or 2-fer is short for two for one. One for you and one for me]({"stubs":["exercises/twofer.go"], "command":"go test -run ShareWith"})
