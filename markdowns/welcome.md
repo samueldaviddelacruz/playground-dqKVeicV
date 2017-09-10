@@ -9,7 +9,7 @@ If you are new to Go i recommend: Go by Example (https://gobyexample.com), and t
 # Hello World
 The objective is simple:
 
-Define a function named HelloWorld that takes no arguments,and returns a Hello, World!.
+Define a function named HelloWorld that takes no arguments,and returns a Hello, World! string.
 In other words, define a function with the following signature: HelloWorld() string that returns  Hello, World!
 
 
