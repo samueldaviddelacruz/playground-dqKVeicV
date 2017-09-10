@@ -6,5 +6,5 @@ Ff you are new to Go i recommend: Go by Example (https://gobyexample.com), and t
 
 
 # Hello World
-@[The classical introductory exercise. Just say "Hello, World!"]({"stubs":["universe/universe.go"], "command":"go test -run Universe"})
+@[The classical introductory exercise. Just say "Hello, World!"]({"stubs":["universe/universe.go"], "command":"go test -run HelloWorld"})
 
