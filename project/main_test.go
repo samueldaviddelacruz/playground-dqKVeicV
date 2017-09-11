@@ -12,6 +12,43 @@ func msg(channel string, msg string) {
   fmt.Printf("TECHIO> message --channel \"%v\" \"%v\"\n", channel, msg)
 }
 
+
+func TestLeapYears(t *testing.T) {
+	
+	var testCases = []struct {
+	year        int
+	expected    bool
+	description string
+	}{
+	{2015, false, "year not divisible by 4: common year"},
+	{2016, true, "year divisible by 4, not divisible by 100: leap year"},
+	{2100, false, "year divisible by 100, not divisible by 400: common year"},
+	{2000, true, "year divisible by 400: leap year"},
+	}
+	
+	didPass:=true
+	for _, test := range testCases {
+		observed := exercises.IsLeapYear(test.year)
+		if observed != test.expected {
+			t.Fatalf("IsLeapYear(%d) = %t, want %t (%s)",
+				test.year, observed, test.expected, test.description)
+			  didPass = false
+		}else{
+			
+			 msg("👍", test.expected)		
+			
+		}
+	}
+	
+	if !didPass {
+	    msg("Oops! 👎", "Please try again !")	
+	}
+	
+	success(didPass)
+		
+}
+
+
 func TestShareWith(t *testing.T) {
 	tests := []struct {
 		name, expected string
@@ -20,11 +57,13 @@ func TestShareWith(t *testing.T) {
 		{"Alice", "One for Alice, one for me."},
 		{"Bob", "One for Bob, one for me."},
 	}
+	didPass:=true
 	for _, test := range tests {
 		if observed := exercises.ShareWith(test.name); observed != test.expected {
 			t.Fatalf("ShareWith(%s) = %v, want %v", test.name, observed, test.expected)
-			success(false)
-			msg("Oops! 👎", "Please try again !")
+			//success(false)
+			didPass = false
+			
 		}else{
 			if test.name == ""{
 			      msg("you", test.expected + "👍")	
@@ -34,7 +73,12 @@ func TestShareWith(t *testing.T) {
 			
 		}
 	}
-	success(true)
+	
+	if !didPass {
+	    msg("Oops! 👎", "Please try again !")	
+	}
+	
+	success(didPass)
 }
 
 func TestHelloWorld(t *testing.T) {
