@@ -3,7 +3,7 @@ import "testing"
 import "fmt"
 import "./universe"
 import "./exercises"
-
+import "strconv"
 func success(b bool) {
   fmt.Printf("TECHIO> success %v\n",b)
 }
@@ -35,7 +35,7 @@ func TestLeapYears(t *testing.T) {
 			  didPass = false
 		}else{
 			
-			msg(string(test.year+"👍"), string(test.expected))		
+			msg( fmt.Sprintf("%d%d",test.year,"👍"), strconv.FormatBool(test.expected) )		
 			
 		}
 	}
