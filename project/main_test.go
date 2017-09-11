@@ -35,7 +35,7 @@ func TestLeapYears(t *testing.T) {
 			  didPass = false
 		}else{
 			
-			 msg("👍", test.expected)		
+			msg(test.year+"👍", string(test.expected))		
 			
 		}
 	}
