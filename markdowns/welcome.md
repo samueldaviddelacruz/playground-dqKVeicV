@@ -28,12 +28,12 @@ If the given name is "Alice", the result should be "One for Alice, one for me." 
 
 Define a function ShareWith(string) string.
 
-Example:
-h := ShareWith("")
-
-fmt.Println(h)
-
-// Output: One for you, one for me.	
+    Example:
+    h := ShareWith("")
+    
+    fmt.Println(h)
+    
+    // Output: One for you, one for me.	
 
 @[Two-fer or 2-fer is short for two for one. One for you and one for me]({"stubs":["exercises/twofer.go"], "command":"go test -run ShareWith"})
 
@@ -51,22 +51,24 @@ The tricky thing here is that a leap year in the Gregorian calendar occurs:
   
 
 	    unless the year is also evenly divisible by 400
+   
     
 Example:
-h := IsLeapYear(2015)
 
-fmt.Println(h)
-
-// Output: false
-//reason : "year not divisible by 4: common year"
-
-
-h := IsLeapYear(2016)
-
-fmt.Println(h)
-
-// Output: true
-//reason : ""year divisible by 4, not divisible by 100: leap year""
+    h := IsLeapYear(2015)
+    
+    fmt.Println(h)
+    
+    // Output: false
+    //reason : "year not divisible by 4: common year"
+    
+    
+    h := IsLeapYear(2016)
+    
+    fmt.Println(h)
+    
+    // Output: true
+    //reason : "year divisible by 4, not divisible by 100: leap year"
 
 
 @[Report if it is a leap year.]({"stubs":["exercises/leapyear.go"], "command":"go test -run LeapYears"})
