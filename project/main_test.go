@@ -35,7 +35,7 @@ func TestLeapYears(t *testing.T) {
 			  didPass = false
 		}else{
 			
-			msg( fmt.Sprintf("%d%d",test.year,"👍"), strconv.FormatBool(test.expected) )		
+			msg( fmt.Sprintf("%d%s",test.year,"👍"), strconv.FormatBool(test.expected) )		
 			
 		}
 	}
